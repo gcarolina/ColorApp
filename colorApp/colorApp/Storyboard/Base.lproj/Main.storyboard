@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FX0-QU-WAR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="1ft-9j-wPz">
+            <objects>
+                <navigationController id="FX0-QU-WAR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HVu-Hl-EWb">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sbr-Ip-Vjx" kind="relationship" relationship="rootViewController" id="WpP-kb-QEx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9W-Bf-dfr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66" y="11"/>
+        </scene>
+        <!--Change View Controller-->
+        <scene sceneID="T6R-Mw-5cc">
+            <objects>
+                <viewController storyboardIdentifier="ChangeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sbr-Ip-Vjx" customClass="ChangeViewController" customModule="ColorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="25f-VL-WzR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="M3P-lO-tLK">
+                                <rect key="frame" x="25" y="100" width="364" height="158.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="365-vd-5VH">
+                                        <rect key="frame" x="74" y="0.0" width="216.5" height="38.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Change Background">
+                                            <fontDescription key="titleFontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="21"/>
+                                            <color key="baseForegroundColor" red="0.75842323690000002" green="0.089519335977188044" blue="0.059610414457060126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="changeBackAction" destination="sbr-Ip-Vjx" eventType="touchUpInside" id="EZf-iH-nuC"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paint-brush-artist-svgrepo-com" translatesAutoresizingMaskIntoConstraints="NO" id="f30-1T-fJ5">
+                                        <rect key="frame" x="132" y="58.5" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="f30-1T-fJ5" secondAttribute="height" id="8zi-Af-lAF"/>
+                                            <constraint firstAttribute="width" constant="100" id="Etz-dF-HsH"/>
+                                            <constraint firstAttribute="height" constant="100" id="UKO-7d-AZm"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8dy-oA-Jb1"/>
+                        <color key="backgroundColor" red="0.95760777019999999" green="0.68531109400000001" blue="0.56984436429999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8dy-oA-Jb1" firstAttribute="trailing" secondItem="M3P-lO-tLK" secondAttribute="trailing" constant="25" id="6Ak-ix-d0r"/>
+                            <constraint firstItem="M3P-lO-tLK" firstAttribute="top" secondItem="25f-VL-WzR" secondAttribute="top" constant="100" id="IZ7-cT-QTJ"/>
+                            <constraint firstItem="M3P-lO-tLK" firstAttribute="leading" secondItem="8dy-oA-Jb1" secondAttribute="leading" constant="25" id="J3S-DP-gs2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JD6-4D-Jsv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="05v-Fm-gpI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="863.35877862595419" y="10.563380281690142"/>
+        </scene>
+        <!--Color View Controller-->
+        <scene sceneID="PJS-oL-5N1">
+            <objects>
+                <viewController storyboardIdentifier="ColorViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r13-Sm-eEv" customClass="ColorViewController" customModule="ColorApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gwi-w4-mg8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="NEo-d6-rGp">
+                                <rect key="frame" x="25" y="98" width="364" height="684"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="3sO-Xl-5Du">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="295"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Sw-iu-yRC">
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="65"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCy-dh-zEM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="21"/>
+                                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                                                        <color key="textColor" red="0.73308994009999995" green="0.1116958277" blue="0.14751438419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="EwQ-M3-0pi">
+                                                        <rect key="frame" x="0.0" y="31" width="355" height="34"/>
+                                                        <subviews>
+                                                            <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="120" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="bcW-DC-Mo9">
+                                                                <rect key="frame" x="-2" y="0.0" width="284" height="35"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="280" id="fnd-W1-FY6"/>
+                                                                </constraints>
+                                                                <color key="minimumTrackTintColor" red="0.40798734409999998" green="0.1116958277" blue="0.14751438419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="maximumTrackTintColor" red="0.67429083590000005" green="0.4019869566" blue="0.32324022050000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="thumbTintColor" red="0.48770619402028093" green="0.075503382141505898" blue="0.10292114216044922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <connections>
+                                                                    <action selector="sliderAction:" destination="r13-Sm-eEv" eventType="valueChanged" id="9Ml-tn-zXs"/>
+                                                                </connections>
+                                                            </slider>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CUJ-79-KDF">
+                                                                <rect key="frame" x="305" y="0.0" width="50" height="34"/>
+                                                                <color key="backgroundColor" red="0.57448115493312024" green="0.20779284577165558" blue="0.19386074263836325" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="50" id="uRZ-ef-cJX"/>
+                                                                </constraints>
+                                                                <color key="textColor" red="0.95760777019999999" green="0.68531109400000001" blue="0.56984436429999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="redTFAction" destination="r13-Sm-eEv" eventType="editingChanged" id="Vw1-dz-R3P"/>
+                                                                </connections>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lRj-3l-ljj">
+                                                <rect key="frame" x="0.0" y="115" width="364" height="65"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mom-yq-UWm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="49" height="21"/>
+                                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                                                        <color key="textColor" red="0.24733401817741732" green="0.41363016764322913" blue="0.074297277555427449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="S8a-Bi-PUP">
+                                                        <rect key="frame" x="0.0" y="31" width="355" height="34"/>
+                                                        <subviews>
+                                                            <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="120" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="qgu-pH-PbA">
+                                                                <rect key="frame" x="-2" y="0.0" width="284" height="35"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="280" id="dzu-OJ-Ku9"/>
+                                                                </constraints>
+                                                                <color key="minimumTrackTintColor" red="0.236570292123057" green="0.40798734409999998" blue="0.17026038355599424" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="maximumTrackTintColor" red="0.67429083590000005" green="0.4019869566" blue="0.32324022050000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="thumbTintColor" red="0.22798079623514381" green="0.34928208168106845" blue="0.22216592789544765" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <connections>
+                                                                    <action selector="sliderAction:" destination="r13-Sm-eEv" eventType="valueChanged" id="qSQ-b8-4vX"/>
+                                                                </connections>
+                                                            </slider>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AKd-NP-qke">
+                                                                <rect key="frame" x="305" y="0.0" width="50" height="34"/>
+                                                                <color key="backgroundColor" red="0.13249180479662456" green="0.27276526557074654" blue="0.10258366786178198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="50" id="R7R-JT-IAe"/>
+                                                                </constraints>
+                                                                <color key="textColor" red="0.95760777019999999" green="0.68531109400000001" blue="0.56984436429999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="greenTFAction" destination="r13-Sm-eEv" eventType="editingChanged" id="duQ-mU-CRa"/>
+                                                                </connections>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aWi-Fg-kSX">
+                                                <rect key="frame" x="0.0" y="230" width="364" height="65"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZl-Ni-zTf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="35.5" height="21"/>
+                                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                                                        <color key="textColor" red="0.171909268418763" green="0.12079923260898838" blue="0.58692307905717334" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="FdC-sA-u4D">
+                                                        <rect key="frame" x="0.0" y="31" width="355" height="34"/>
+                                                        <subviews>
+                                                            <slider opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="120" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="jgj-gc-kBV">
+                                                                <rect key="frame" x="-2" y="0.0" width="284" height="35"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="280" id="gSr-s9-MO0"/>
+                                                                </constraints>
+                                                                <color key="minimumTrackTintColor" red="0.11272601327311499" green="0.12798648003583768" blue="0.40798734409999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="maximumTrackTintColor" red="0.67429083590000005" green="0.4019869566" blue="0.32324022050000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="thumbTintColor" red="0.067657002269504982" green="0.069581940487375996" blue="0.48770619399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <connections>
+                                                                    <action selector="sliderAction:" destination="r13-Sm-eEv" eventType="valueChanged" id="V2d-mo-6qd"/>
+                                                                </connections>
+                                                            </slider>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WQS-Sh-cCn">
+                                                                <rect key="frame" x="305" y="0.0" width="50" height="34"/>
+                                                                <color key="backgroundColor" red="0.093107627180257155" green="0.086333065818671187" blue="0.41945532596472535" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="50" id="TPS-b4-Nbf"/>
+                                                                </constraints>
+                                                                <color key="textColor" red="0.95760777019999999" green="0.68531109400000001" blue="0.56984436429999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="blueTFAction" destination="r13-Sm-eEv" eventType="editingChanged" id="GD3-8k-lcJ"/>
+                                                                </connections>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LOO-yO-8QM">
+                                        <rect key="frame" x="0.0" y="365" width="364" height="74"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opacity" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVh-4U-Ra4">
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="YNW-Vf-EEF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="18"/>
+                                                <color key="textColor" red="0.42108092645202022" green="0.22687785021318452" blue="0.23476459330055957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Ku6-eT-Xzq">
+                                                <rect key="frame" x="0.0" y="40" width="355" height="34"/>
+                                                <subviews>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="q6l-Vz-3ZL">
+                                                        <rect key="frame" x="-2" y="0.0" width="284" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="280" id="wVV-Ob-0oX"/>
+                                                        </constraints>
+                                                        <color key="minimumTrackTintColor" red="0.42108092650000001" green="0.22687785020000001" blue="0.23476459329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="maximumTrackTintColor" red="0.67429083590000005" green="0.4019869566" blue="0.32324022050000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="thumbTintColor" red="0.42108092650000001" green="0.22687785020000001" blue="0.23476459329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <connections>
+                                                            <action selector="opacitySliderAction" destination="r13-Sm-eEv" eventType="valueChanged" id="t2T-6a-OMD"/>
+                                                        </connections>
+                                                    </slider>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gog-zi-5jQ">
+                                                        <rect key="frame" x="305" y="0.0" width="50" height="34"/>
+                                                        <color key="backgroundColor" red="0.39129230229541512" green="0.1932412258083428" blue="0.21511953906268552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="xTz-dP-G3s"/>
+                                                        </constraints>
+                                                        <color key="textColor" red="0.95760777019999999" green="0.68531109400000001" blue="0.56984436429999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="opacityTFAction" destination="r13-Sm-eEv" eventType="editingChanged" id="iVs-La-sXq"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="bOQ-ws-2oW">
+                                        <rect key="frame" x="0.0" y="509" width="364" height="175"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E2L-df-XDq">
+                                                <rect key="frame" x="2" y="0.0" width="360" height="50"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Vui-Sa-j78"/>
+                                                    <constraint firstAttribute="width" constant="360" id="XWp-cm-2gH"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQj-tZ-zRb">
+                                                <rect key="frame" x="146.5" y="120" width="71.5" height="55"/>
+                                                <color key="tintColor" red="0.73308994009999995" green="0.1116958277" blue="0.14751438419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Done">
+                                                    <fontDescription key="titleFontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="20"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="doneAction" destination="r13-Sm-eEv" eventType="touchUpInside" id="BHO-zn-zgs"/>
+                                                    <segue destination="IPT-OF-Ben" kind="unwind" identifier="goToChangeVC" unwindAction="unwindToChange:" id="fau-sy-rTA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RX0-Y6-GAt"/>
+                        <color key="backgroundColor" red="1" green="0.73687585690000001" blue="0.61510503329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NEo-d6-rGp" firstAttribute="top" secondItem="RX0-Y6-GAt" secondAttribute="top" constant="50" id="CKX-kS-kie"/>
+                            <constraint firstAttribute="trailing" secondItem="NEo-d6-rGp" secondAttribute="trailing" constant="25" id="bwg-Tb-Q3X"/>
+                            <constraint firstItem="NEo-d6-rGp" firstAttribute="leading" secondItem="RX0-Y6-GAt" secondAttribute="leading" constant="25" id="tjf-Nv-LjC"/>
+                            <constraint firstItem="RX0-Y6-GAt" firstAttribute="bottom" secondItem="NEo-d6-rGp" secondAttribute="bottom" constant="80" id="xqp-15-JN4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blueSlider" destination="jgj-gc-kBV" id="mFz-TM-ZEp"/>
+                        <outlet property="blueTF" destination="WQS-Sh-cCn" id="Vkn-MT-vEU"/>
+                        <outlet property="colorView" destination="E2L-df-XDq" id="Yv2-hn-mcD"/>
+                        <outlet property="doneBtn" destination="NQj-tZ-zRb" id="vHL-9N-Cky"/>
+                        <outlet property="greenSlider" destination="qgu-pH-PbA" id="dm2-lJ-Tah"/>
+                        <outlet property="greenTF" destination="AKd-NP-qke" id="vuD-uv-c1x"/>
+                        <outlet property="opacitySlider" destination="q6l-Vz-3ZL" id="wi2-49-AhL"/>
+                        <outlet property="opacityTF" destination="gog-zi-5jQ" id="Ubr-vG-Ufe"/>
+                        <outlet property="redSlider" destination="bcW-DC-Mo9" id="cs2-wB-aUM"/>
+                        <outlet property="redTF" destination="CUJ-79-KDF" id="eZE-D9-cxh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c6Y-5N-saN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="IPT-OF-Ben" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1630" y="5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paint-brush-artist-svgrepo-com" width="512.16497802734375" height="512.16497802734375"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="lpj-X2-PMO">
+                                <rect key="frame" x="25" y="362.66666666666669" width="343" height="152.00000000000006"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paint-palette-svgrepo-com" translatesAutoresizingMaskIntoConstraints="NO" id="XCu-IW-SHv">
+                                        <rect key="frame" x="121.66666666666666" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="MQd-Hm-O0v"/>
+                                            <constraint firstAttribute="width" constant="100" id="ZIw-Fb-fjP"/>
+                                            <constraint firstAttribute="width" secondItem="XCu-IW-SHv" secondAttribute="height" multiplier="1:1" id="v3M-ia-OQU"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colors" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ucf-LM-b6b">
+                                        <rect key="frame" x="138.33333333333334" y="125" width="66.666666666666657" height="27"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="23"/>
+                                        <color key="textColor" red="0.75842323690000002" green="0.27376461270000002" blue="0.071773821380000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.95760777020695231" green="0.6853110939863416" blue="0.56984436431246455" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lpj-X2-PMO" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="25" id="64w-KT-RHY"/>
+                            <constraint firstItem="lpj-X2-PMO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ERs-44-82r"/>
+                            <constraint firstAttribute="trailing" secondItem="lpj-X2-PMO" secondAttribute="trailing" constant="25" id="dWW-zc-s2N"/>
+                            <constraint firstItem="lpj-X2-PMO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="gRh-Dr-mq7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paint-palette-svgrepo-com" width="512" height="512"/>
+    </resources>
+</document>
