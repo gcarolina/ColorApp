@@ -6,6 +6,8 @@ import UIKit
 
 final class ColorViewController: UIViewController {
     var color: Color?
+    var delegate: ChangeColor?
+    var colorMain: UIView?
     // MARK: - IBOutlets
     ///red
     @IBOutlet private weak var redSlider: UISlider!
@@ -32,7 +34,6 @@ final class ColorViewController: UIViewController {
     }
     
     // MARK: - Actions
-    
     @IBAction func sliderAction(_ sender: UISlider) {
         if (sender.tag == 1) {
             color?.setRed(red: sender.value)
@@ -47,6 +48,7 @@ final class ColorViewController: UIViewController {
             blueTF.text = color?.getValueBlue()
             colorView.backgroundColor = color?.getColor()
         }
+        doneBtn.isEnabled = isEnabledButton()
     }
     
     @IBAction private func redTFAction() {
@@ -54,6 +56,7 @@ final class ColorViewController: UIViewController {
             redSlider.value = Float(Int(actualNumber))
             color?.setRed(red: redSlider.value)
             colorView.backgroundColor = color?.getColor()
+            doneBtn.isEnabled = isEnabledButton()
         } else {
             showAlert(title: "Wrong format!", message: "Please enter a value from 0 to 255")
         }
@@ -64,6 +67,7 @@ final class ColorViewController: UIViewController {
             greenSlider.value = Float(Int(actualNumber))
             color?.setGreen(green: greenSlider.value)
             colorView.backgroundColor = color?.getColor()
+            doneBtn.isEnabled = isEnabledButton()
         } else {
             showAlert(title: "Wrong format!", message: "Please enter a value from 0 to 255")
         }
@@ -74,6 +78,7 @@ final class ColorViewController: UIViewController {
             blueSlider.value = Float(Int(actualNumber))
             color?.setBlue(blue: blueSlider.value)
             colorView.backgroundColor = color?.getColor()
+            doneBtn.isEnabled = isEnabledButton()
         } else {
             showAlert(title: "Wrong format!", message: "Please enter a value from 0 to 255")
         }
@@ -83,11 +88,13 @@ final class ColorViewController: UIViewController {
         let shortValue = round(Float(opacitySlider.value) * 10) / 10
         opacityTF.text = String(shortValue)
         colorView.alpha = CGFloat(shortValue)
+        doneBtn.isEnabled = isEnabledButton()
     }
     @IBAction func opacityTFAction() {
         if let actualNumber = Int(opacityTF.text ?? "" ), actualNumber >= 0 && actualNumber <= 1 {
             opacitySlider.value = Float(Int(actualNumber))
             colorView.alpha = CGFloat(actualNumber)
+            doneBtn.isEnabled = isEnabledButton()
         } else {
             showAlert(title: "Wrong format!", message: "Please enter a value from 0 to 1")
         }
@@ -95,7 +102,8 @@ final class ColorViewController: UIViewController {
     
     // MARK: - Navigation
     @IBAction func doneAction() {
-        performSegue(withIdentifier: "goToChangeVC", sender: "")
+        delegate?.updateColor(color: colorView.backgroundColor)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     private func setupUI() {
@@ -104,5 +112,19 @@ final class ColorViewController: UIViewController {
         blueTF.text = color?.getValueBlue()
         colorView.backgroundColor = color?.getColor()
         opacityTF.text = "\(opacitySlider.value)"
+        if colorView.backgroundColor != colorMain?.backgroundColor {
+            doneBtn.isEnabled = false
+        } else {
+            doneBtn.isEnabled = true
+        }
+    }
+    
+    private func isEnabledButton() -> Bool {
+        if colorView.backgroundColor != colorMain?.backgroundColor {
+            doneBtn.isEnabled = true
+        } else {
+            doneBtn.isEnabled = false
+        }
+        return doneBtn.isEnabled
     }
 }

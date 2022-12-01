@@ -1,9 +1,9 @@
 import UIKit
 
 class Color {
-    private var red: CGFloat
-    private var green: CGFloat
-    private var blue: CGFloat
+    var red: CGFloat
+    var green: CGFloat
+    var blue: CGFloat
     
     init(red: Float, green: Float, blue: Float) {
         self.red = CGFloat(red)

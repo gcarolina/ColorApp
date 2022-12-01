@@ -58,7 +58,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8dy-oA-Jb1"/>
-                        <color key="backgroundColor" red="0.95760777019999999" green="0.68531109400000001" blue="0.56984436429999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8dy-oA-Jb1" firstAttribute="trailing" secondItem="M3P-lO-tLK" secondAttribute="trailing" constant="25" id="6Ak-ix-d0r"/>
                             <constraint firstItem="M3P-lO-tLK" firstAttribute="top" secondItem="25f-VL-WzR" secondAttribute="top" constant="100" id="IZ7-cT-QTJ"/>
@@ -66,6 +66,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JD6-4D-Jsv"/>
+                    <connections>
+                        <outlet property="mainView" destination="25f-VL-WzR" id="3mu-9v-3YE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="05v-Fm-gpI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,7 +83,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="NEo-d6-rGp">
-                                <rect key="frame" x="25" y="98" width="364" height="684"/>
+                                <rect key="frame" x="25" y="98" width="364" height="559"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="3sO-Xl-5Du">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="295"/>
@@ -255,7 +258,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="bOQ-ws-2oW">
-                                        <rect key="frame" x="0.0" y="509" width="364" height="175"/>
+                                        <rect key="frame" x="0.0" y="509" width="364" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E2L-df-XDq">
                                                 <rect key="frame" x="2" y="0.0" width="360" height="50"/>
@@ -265,37 +268,38 @@
                                                     <constraint firstAttribute="width" constant="360" id="XWp-cm-2gH"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQj-tZ-zRb">
-                                                <rect key="frame" x="146.5" y="120" width="71.5" height="55"/>
-                                                <color key="tintColor" red="0.73308994009999995" green="0.1116958277" blue="0.14751438419999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Done">
-                                                    <fontDescription key="titleFontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="20"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="doneAction" destination="r13-Sm-eEv" eventType="touchUpInside" id="BHO-zn-zgs"/>
-                                                    <segue destination="IPT-OF-Ben" kind="unwind" identifier="goToChangeVC" unwindAction="unwindToChange:" id="fau-sy-rTA"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7B-QE-1Jm">
+                                <rect key="frame" x="25" y="707" width="364" height="37.5"/>
+                                <color key="tintColor" red="0.34353028889999998" green="0.16965376970000001" blue="0.18886156709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done">
+                                    <fontDescription key="titleFontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="doneAction" destination="r13-Sm-eEv" eventType="touchUpInside" id="iZZ-m1-BQe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RX0-Y6-GAt"/>
                         <color key="backgroundColor" red="1" green="0.73687585690000001" blue="0.61510503329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="H7B-QE-1Jm" firstAttribute="top" secondItem="NEo-d6-rGp" secondAttribute="bottom" constant="50" id="3IO-dH-3ui"/>
                             <constraint firstItem="NEo-d6-rGp" firstAttribute="top" secondItem="RX0-Y6-GAt" secondAttribute="top" constant="50" id="CKX-kS-kie"/>
+                            <constraint firstItem="H7B-QE-1Jm" firstAttribute="leading" secondItem="RX0-Y6-GAt" secondAttribute="leading" constant="25" id="Guj-hV-6l1"/>
+                            <constraint firstItem="RX0-Y6-GAt" firstAttribute="trailing" secondItem="H7B-QE-1Jm" secondAttribute="trailing" constant="25" id="TOc-Z7-tJd"/>
                             <constraint firstAttribute="trailing" secondItem="NEo-d6-rGp" secondAttribute="trailing" constant="25" id="bwg-Tb-Q3X"/>
                             <constraint firstItem="NEo-d6-rGp" firstAttribute="leading" secondItem="RX0-Y6-GAt" secondAttribute="leading" constant="25" id="tjf-Nv-LjC"/>
-                            <constraint firstItem="RX0-Y6-GAt" firstAttribute="bottom" secondItem="NEo-d6-rGp" secondAttribute="bottom" constant="80" id="xqp-15-JN4"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="blueSlider" destination="jgj-gc-kBV" id="mFz-TM-ZEp"/>
                         <outlet property="blueTF" destination="WQS-Sh-cCn" id="Vkn-MT-vEU"/>
                         <outlet property="colorView" destination="E2L-df-XDq" id="Yv2-hn-mcD"/>
-                        <outlet property="doneBtn" destination="NQj-tZ-zRb" id="vHL-9N-Cky"/>
+                        <outlet property="doneBtn" destination="H7B-QE-1Jm" id="uyz-xw-08d"/>
                         <outlet property="greenSlider" destination="qgu-pH-PbA" id="dm2-lJ-Tah"/>
                         <outlet property="greenTF" destination="AKd-NP-qke" id="vuD-uv-c1x"/>
                         <outlet property="opacitySlider" destination="q6l-Vz-3ZL" id="wi2-49-AhL"/>
@@ -305,7 +309,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6Y-5N-saN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="IPT-OF-Ben" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1630" y="5"/>
         </scene>

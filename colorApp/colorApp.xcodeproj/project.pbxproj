@@ -12,6 +12,7 @@
 		F148F08B2937ED89008FBB52 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F148F08A2937ED89008FBB52 /* Color.swift */; };
 		F148F08D2937FD29008FBB52 /* ExtensionAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F148F08C2937FD29008FBB52 /* ExtensionAlert.swift */; };
 		F148F090293808ED008FBB52 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F148F08F293808ED008FBB52 /* UIViewControllerExt.swift */; };
+		F148F09229380A65008FBB52 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F148F09129380A65008FBB52 /* ColorExt.swift */; };
 		F19CF89629375F9A0009D6F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19CF89529375F9A0009D6F0 /* AppDelegate.swift */; };
 		F19CF89829375F9A0009D6F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19CF89729375F9A0009D6F0 /* SceneDelegate.swift */; };
 		F19CF89D29375F9A0009D6F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19CF89B29375F9A0009D6F0 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		F148F08A2937ED89008FBB52 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F148F08C2937FD29008FBB52 /* ExtensionAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionAlert.swift; sourceTree = "<group>"; };
 		F148F08F293808ED008FBB52 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		F148F09129380A65008FBB52 /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
 		F19CF89229375F9A0009D6F0 /* ColorApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19CF89529375F9A0009D6F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F19CF89729375F9A0009D6F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			children = (
 				F148F08C2937FD29008FBB52 /* ExtensionAlert.swift */,
 				F148F08F293808ED008FBB52 /* UIViewControllerExt.swift */,
+				F148F09129380A65008FBB52 /* ColorExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F148F0872937B9DA008FBB52 /* ChangeViewController.swift in Sources */,
+				F148F09229380A65008FBB52 /* ColorExt.swift in Sources */,
 				F19CF89629375F9A0009D6F0 /* AppDelegate.swift in Sources */,
 				F148F0892937BA16008FBB52 /* ColorViewController.swift in Sources */,
 				F148F08D2937FD29008FBB52 /* ExtensionAlert.swift in Sources */,
