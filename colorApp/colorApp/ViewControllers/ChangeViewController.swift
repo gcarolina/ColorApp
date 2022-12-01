@@ -15,7 +15,6 @@ final class ChangeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
     // MARK: - Navigation
     // переход от ChangeVC к ColorVC
     @IBAction private func changeBackAction() {

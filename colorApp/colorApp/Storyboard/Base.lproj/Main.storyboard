@@ -112,7 +112,7 @@
                                                                     <action selector="sliderAction:" destination="r13-Sm-eEv" eventType="valueChanged" id="9Ml-tn-zXs"/>
                                                                 </connections>
                                                             </slider>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CUJ-79-KDF">
+                                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CUJ-79-KDF">
                                                                 <rect key="frame" x="305" y="0.0" width="50" height="34"/>
                                                                 <color key="backgroundColor" red="0.57448115493312024" green="0.20779284577165558" blue="0.19386074263836325" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
@@ -122,7 +122,7 @@
                                                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
-                                                                    <action selector="redTFAction" destination="r13-Sm-eEv" eventType="editingChanged" id="Vw1-dz-R3P"/>
+                                                                    <action selector="textFieldAction:" destination="r13-Sm-eEv" eventType="editingChanged" id="kA7-tB-qYx"/>
                                                                 </connections>
                                                             </textField>
                                                         </subviews>
@@ -153,7 +153,7 @@
                                                                     <action selector="sliderAction:" destination="r13-Sm-eEv" eventType="valueChanged" id="qSQ-b8-4vX"/>
                                                                 </connections>
                                                             </slider>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AKd-NP-qke">
+                                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AKd-NP-qke">
                                                                 <rect key="frame" x="305" y="0.0" width="50" height="34"/>
                                                                 <color key="backgroundColor" red="0.13249180479662456" green="0.27276526557074654" blue="0.10258366786178198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
@@ -163,7 +163,7 @@
                                                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
-                                                                    <action selector="greenTFAction" destination="r13-Sm-eEv" eventType="editingChanged" id="duQ-mU-CRa"/>
+                                                                    <action selector="textFieldAction:" destination="r13-Sm-eEv" eventType="editingChanged" id="FcW-mM-GJX"/>
                                                                 </connections>
                                                             </textField>
                                                         </subviews>
@@ -194,7 +194,7 @@
                                                                     <action selector="sliderAction:" destination="r13-Sm-eEv" eventType="valueChanged" id="V2d-mo-6qd"/>
                                                                 </connections>
                                                             </slider>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WQS-Sh-cCn">
+                                                            <textField opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WQS-Sh-cCn">
                                                                 <rect key="frame" x="305" y="0.0" width="50" height="34"/>
                                                                 <color key="backgroundColor" red="0.093107627180257155" green="0.086333065818671187" blue="0.41945532596472535" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
@@ -204,7 +204,7 @@
                                                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
-                                                                    <action selector="blueTFAction" destination="r13-Sm-eEv" eventType="editingChanged" id="GD3-8k-lcJ"/>
+                                                                    <action selector="textFieldAction:" destination="r13-Sm-eEv" eventType="editingChanged" id="jUG-MP-osD"/>
                                                                 </connections>
                                                             </textField>
                                                         </subviews>

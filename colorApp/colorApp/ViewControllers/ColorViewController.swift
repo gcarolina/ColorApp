@@ -51,33 +51,23 @@ final class ColorViewController: UIViewController {
         doneBtn.isEnabled = isEnabledButton()
     }
     
-    @IBAction private func redTFAction() {
-        if let actualNumber = Int(redTF.text ?? "" ), actualNumber >= 0 && actualNumber <= 255 {
-            redSlider.value = Float(Int(actualNumber))
-            color?.setRed(red: redSlider.value)
-            colorView.backgroundColor = color?.getColor()
-            doneBtn.isEnabled = isEnabledButton()
-        } else {
-            showAlert(title: "Wrong format!", message: "Please enter a value from 0 to 255")
-        }
-    }
     
-    @IBAction func greenTFAction() {
-        if let actualNumber = Int(greenTF.text ?? "" ), actualNumber >= 0 && actualNumber <= 255 {
-            greenSlider.value = Float(Int(actualNumber))
-            color?.setGreen(green: greenSlider.value)
-            colorView.backgroundColor = color?.getColor()
-            doneBtn.isEnabled = isEnabledButton()
-        } else {
-            showAlert(title: "Wrong format!", message: "Please enter a value from 0 to 255")
-        }
-    }
-    
-    @IBAction func blueTFAction() {
-        if let actualNumber = Int(blueTF.text ?? "" ), actualNumber >= 0 && actualNumber <= 255 {
-            blueSlider.value = Float(Int(actualNumber))
-            color?.setBlue(blue: blueSlider.value)
-            colorView.backgroundColor = color?.getColor()
+    @IBAction func textFieldAction(_ sender: UITextField) {
+        if let actualNumber = Int(sender.text ?? ""), actualNumber >= 0 && actualNumber <= 255 {
+            if (sender.tag == 1) {
+                // if let actualNumber = Int(redTF.text ?? "" ), actualNumber >= 0 && actualNumber <= 255 {
+                redSlider.value = Float(Int(sender.text ?? "" ) ?? 0)
+                color?.setRed(red: redSlider.value)
+                colorView.backgroundColor = color?.getColor()
+            } else if (sender.tag == 2) {
+                greenSlider.value = Float(Int(sender.text ?? "" ) ?? 0)
+                color?.setGreen(green: greenSlider.value)
+                colorView.backgroundColor = color?.getColor()
+            } else if (sender.tag == 3) {
+                blueSlider.value = Float(Int(sender.text ?? "" ) ?? 0)
+                color?.setBlue(blue: blueSlider.value)
+                colorView.backgroundColor = color?.getColor()
+            }
             doneBtn.isEnabled = isEnabledButton()
         } else {
             showAlert(title: "Wrong format!", message: "Please enter a value from 0 to 255")
@@ -106,6 +96,7 @@ final class ColorViewController: UIViewController {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
+    // MARK: - Functions
     private func setupUI() {
         redTF.text = color?.getValueRed()
         greenTF.text = color?.getValueGreen()
