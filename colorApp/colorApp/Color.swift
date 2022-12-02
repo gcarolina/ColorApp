@@ -29,8 +29,12 @@ class Color: Equatable {
         self.blue = CGFloat(blue)
     }
     
+    func setAlpha(alpha: Float) {
+        self.alpha = CGFloat(alpha)
+    }
+    
     func getColor() -> UIColor {
-        let color = UIColor(red: red/255, green: green/255, blue: blue/255, alpha: 1.0)
+        let color = UIColor(red: red/255, green: green/255, blue: blue/255, alpha: alpha)
         return color
     }
     

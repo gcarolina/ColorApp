@@ -43,7 +43,7 @@ final class ColorViewController: UIViewController {
             checkModels()
         }
     }
-    private var alpha: Int = 1 {
+    private var alpha: Float = 1 {
         didSet {
             ColorController()
             checkModels()
@@ -55,7 +55,7 @@ final class ColorViewController: UIViewController {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
         setupColor()
-        color = Color(red: Float(red), green: Float(green), blue: Float(blue), alpha: Float(alpha))
+        color = Color(red: Float(red), green: Float(green), blue: Float(blue), alpha: alpha)
         setupUI()
     }
     
@@ -65,14 +65,17 @@ final class ColorViewController: UIViewController {
         if (sender.tag == 1) {
             color?.setRed(red: sender.value)
             redTF.text = color?.getValueRed()
+            red = Int(sender.value)
             colorView.backgroundColor = color?.getColor()
         } else if (sender.tag == 2) {
             color?.setGreen(green: sender.value)
             greenTF.text = color?.getValueGreen()
+            green = Int(sender.value)
             colorView.backgroundColor = color?.getColor()
         } else if (sender.tag == 3) {
             color?.setBlue(blue: sender.value)
             blueTF.text = color?.getValueBlue()
+            blue = Int(sender.value)
             colorView.backgroundColor = color?.getColor()
         }
     }
@@ -82,14 +85,17 @@ final class ColorViewController: UIViewController {
             if (sender.tag == 1) {
                 redSlider.value = Float(Int(sender.text ?? "" ) ?? 0)
                 color?.setRed(red: redSlider.value)
+                red = actualNumber
                 colorView.backgroundColor = color?.getColor()
             } else if (sender.tag == 2) {
                 greenSlider.value = Float(Int(sender.text ?? "" ) ?? 0)
                 color?.setGreen(green: greenSlider.value)
+                green = actualNumber
                 colorView.backgroundColor = color?.getColor()
             } else if (sender.tag == 3) {
                 blueSlider.value = Float(Int(sender.text ?? "" ) ?? 0)
                 color?.setBlue(blue: blueSlider.value)
+                blue = actualNumber
                 colorView.backgroundColor = color?.getColor()
             }
         } else {
@@ -100,12 +106,17 @@ final class ColorViewController: UIViewController {
     @IBAction func opacitySliderAction() {
         let shortValue = round(Float(opacitySlider.value) * 10) / 10
         opacityTF.text = String(shortValue)
+        alpha = Float(opacitySlider.value)
         colorView.alpha = CGFloat(shortValue)
+        colorView.backgroundColor = color?.getColor()
     }
     @IBAction func opacityTFAction() {
-        if let actualNumber = Int(opacityTF.text ?? "" ), actualNumber >= 0 && actualNumber <= 1 {
+        if let actualNumber = Float(opacityTF.text ?? ""), actualNumber >= 0 && actualNumber <= 1 {
             opacitySlider.value = Float(Int(actualNumber))
+            alpha = actualNumber
+            color?.setAlpha(alpha: opacitySlider.value)
             colorView.alpha = CGFloat(actualNumber)
+            colorView.backgroundColor = color?.getColor()
         } else {
             showAlert(title: "Wrong format!", message: "Please enter a value from 0 to 1")
         }
@@ -113,7 +124,7 @@ final class ColorViewController: UIViewController {
     
     // MARK: - Navigation
     @IBAction func doneAction() {
-        let colorModel = Color(red: Float(redSlider.value), green: Float(greenSlider.value), blue: Float(blueSlider.value), alpha: Float(opacitySlider.value))
+        let colorModel = Color(red: Float(red), green: Float(green), blue: Float(blue), alpha: alpha)
         
         delegate?.updateColor(color: colorModel)
         self.navigationController?.popToRootViewController(animated: true)
@@ -139,8 +150,7 @@ final class ColorViewController: UIViewController {
     }
     
     private func checkModels() {
-        let newColorModel = Color(red: redSlider.value, green: greenSlider.value, blue: blueSlider.value, alpha: opacitySlider.value)
-//        Color(red: Float(red), green: Float(green), blue: Float(blue), alpha: Float(alpha))
+        let newColorModel = Color(red: Float(red), green: Float(green), blue: Float(blue), alpha: Float(alpha))
         if clrModel != newColorModel {
             doneBtn.isEnabled = true
         } else {
@@ -153,7 +163,7 @@ final class ColorViewController: UIViewController {
             red = Int(colorModel.red)
             green = Int(colorModel.green)
             blue = Int(colorModel.blue)
-            alpha = Int(colorModel.alpha)
+            alpha = Float(colorModel.alpha)
 
             redSlider.value = Float(red)
             greenSlider.value = Float(green)

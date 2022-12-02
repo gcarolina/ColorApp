@@ -34,7 +34,7 @@ extension ChangeViewController: ChangeColor {
         let red = CGFloat(Float(color.red) / 255)
         let green = CGFloat(Float(color.green) / 255)
         let blue = CGFloat(Float(color.blue) / 255)
-        let alpha = CGFloat(Float(color.alpha))
+        let alpha = CGFloat(color.alpha)
         let newColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
         view.backgroundColor = newColor
     }
@@ -53,11 +53,11 @@ func getModelFromUIColor(uiColor: UIColor) -> Color? {
     let redInt = Int(red * 255)
     let greenInt = Int(green * 255)
     let blueInt = Int(blue * 255)
-    let alphaInt = Int(alpha)
+    let alphaInt = Float(alpha)
     
     let colorModel = Color(red: Float(redInt),
                            green: Float(greenInt),
                            blue: Float(blueInt),
-                           alpha: Float(alphaInt))
+                           alpha: alphaInt)
     return colorModel
 }
