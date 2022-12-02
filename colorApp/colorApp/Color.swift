@@ -1,14 +1,20 @@
 import UIKit
 
-class Color {
+class Color: Equatable {
+    static func == (lhs: Color, rhs: Color) -> Bool {
+        lhs.red == rhs.red && lhs.green == rhs.green && lhs.blue == rhs.blue && lhs.alpha == rhs.alpha
+    }
+    
     var red: CGFloat
     var green: CGFloat
     var blue: CGFloat
+    var alpha:CGFloat
     
-    init(red: Float, green: Float, blue: Float) {
+    init(red: Float, green: Float, blue: Float, alpha: Float) {
         self.red = CGFloat(red)
         self.green = CGFloat(green)
         self.blue = CGFloat(blue)
+        self.alpha = CGFloat(alpha)
     }
     
     func setRed(red: Float) {

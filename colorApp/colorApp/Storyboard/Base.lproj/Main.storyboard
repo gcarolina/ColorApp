@@ -66,9 +66,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JD6-4D-Jsv"/>
-                    <connections>
-                        <outlet property="mainView" destination="25f-VL-WzR" id="3mu-9v-3YE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="05v-Fm-gpI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,7 +97,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="EwQ-M3-0pi">
                                                         <rect key="frame" x="0.0" y="31" width="355" height="34"/>
                                                         <subviews>
-                                                            <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="120" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="bcW-DC-Mo9">
+                                                            <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="bcW-DC-Mo9">
                                                                 <rect key="frame" x="-2" y="0.0" width="284" height="35"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="280" id="fnd-W1-FY6"/>
@@ -141,7 +138,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="S8a-Bi-PUP">
                                                         <rect key="frame" x="0.0" y="31" width="355" height="34"/>
                                                         <subviews>
-                                                            <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="120" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="qgu-pH-PbA">
+                                                            <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="qgu-pH-PbA">
                                                                 <rect key="frame" x="-2" y="0.0" width="284" height="35"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="280" id="dzu-OJ-Ku9"/>
@@ -182,7 +179,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="FdC-sA-u4D">
                                                         <rect key="frame" x="0.0" y="31" width="355" height="34"/>
                                                         <subviews>
-                                                            <slider opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="120" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="jgj-gc-kBV">
+                                                            <slider opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="jgj-gc-kBV">
                                                                 <rect key="frame" x="-2" y="0.0" width="284" height="35"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="280" id="gSr-s9-MO0"/>

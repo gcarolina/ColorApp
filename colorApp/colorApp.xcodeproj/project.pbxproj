@@ -76,13 +76,13 @@
 		F19CF89429375F9A0009D6F0 /* ColorApp */ = {
 			isa = PBXGroup;
 			children = (
+				F148F08A2937ED89008FBB52 /* Color.swift */,
 				F19CF8AB293760100009D6F0 /* ViewControllers */,
 				F19CF8AA29375FF60009D6F0 /* Storyboard */,
 				F19CF8A929375FCC0009D6F0 /* Delegates */,
 				F148F08E2937FD53008FBB52 /* Extensions */,
 				F19CF8A329375F9D0009D6F0 /* Info.plist */,
 				F19CF89E29375F9D0009D6F0 /* Assets.xcassets */,
-				F148F08A2937ED89008FBB52 /* Color.swift */,
 			);
 			path = ColorApp;
 			sourceTree = "<group>";
